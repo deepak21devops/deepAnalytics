@@ -1,0 +1,110 @@
+.navbar{
+    height: 80px;
+    /* border:1px solid black; */
+    /* background-color: rgb(38, 38, 175); */
+}
+
+.navContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding:20px;
+}
+
+.navIcon{
+    font-size: 30px;
+    color:rgb(53, 53, 218);
+    font-weight: bold;
+    text-decoration: underline;
+    margin-right: 100px;
+    /* color:white; */
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.navIcon:hover{
+    color:crimson;
+}
+
+.navHeaders{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.navHeaders>li{
+    font-size: 20px;
+    font-weight: 500;
+    /* color:white; */
+    cursor: pointer;
+    transition: 0.5s ease;
+    color:crimson;
+}
+
+.navHeaders>li:hover{
+    color:rgb(53, 53, 218);
+}
+
+.createTask{
+    margin-right: 20px;
+}
+
+.alltask{
+    margin-right: 650px;
+}
+
+.navProfile{
+    /* display: flex; */
+}
+
+.profileContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.profileimg{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profiletext{
+    font-size: 15px;
+    word-break: keep-all;
+}
+
+.notify{
+    margin-right: 20px;
+    font-size: 35px !important;
+   
+}
+.notification{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+}
+.messages{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    top:0;
+    left:15px;
+    font-weight: bolder;
+}
+.profiletext{
+    color:midnightblue;
+    font-size: 18px;
+    font-weight: bolder;
+}
