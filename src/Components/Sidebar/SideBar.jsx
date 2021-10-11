@@ -1,6 +1,9 @@
 import React from 'react'
 import './sidebar.css'
-import { HomeOutlined } from '@material-ui/icons'
+import {
+    HomeOutlined, AddOutlined, AssignmentOutlined, EditOutlined, CheckCircleOutlined,
+    PauseCircleOutlineOutlined, BarChartOutlined, ShowChartOutlined, TimelineOutlined
+} from '@material-ui/icons'
 export default function SideBar() {
     return (
         <div className="sidebar">
@@ -15,12 +18,12 @@ export default function SideBar() {
                             </li>
 
                             <li className="menuItems">
-                                <HomeOutlined className="icons" />
+                                <AddOutlined className="icons" />
                                 <span>Create Task</span>
                             </li>
 
                             <li className="menuItems">
-                                <HomeOutlined className="icons" />
+                                <EditOutlined className="icons" />
                                 <span>Edit Task</span>
                             </li>
                         </ul>
@@ -32,17 +35,17 @@ export default function SideBar() {
                         <h3 className="menuTitle">Quick Menu</h3>
                         <ul className="menulist">
                             <li className="menuItems">
-                                <HomeOutlined className="icons" />
+                                <AssignmentOutlined className="icons" />
                                 <span>My Tasks</span>
                             </li>
 
                             <li className="menuItems">
-                                <HomeOutlined className="icons" />
+                                <CheckCircleOutlined className="icons" />
                                 <span>Completed Tasks</span>
                             </li>
 
                             <li className="menuItems">
-                                <HomeOutlined className="icons" />
+                                <PauseCircleOutlineOutlined className="icons" />
                                 <span>Pending Tasks</span>
                             </li>
                         </ul>
@@ -54,17 +57,17 @@ export default function SideBar() {
                         <h3 className="menuTitle">Reports Menu</h3>
                         <ul className="menulist">
                             <li className="menuItems">
-                                <HomeOutlined className="icons" />
+                                <BarChartOutlined className="icons" />
                                 <span>All Tasks Reports</span>
                             </li>
 
                             <li className="menuItems">
-                                <HomeOutlined className="icons" />
+                                <ShowChartOutlined className="icons" />
                                 <span>Completed Tasks Report</span>
                             </li>
 
                             <li className="menuItems">
-                                <HomeOutlined className="icons" />
+                                <TimelineOutlined className="icons" />
                                 <span>Pending Tasks Report</span>
                             </li>
                         </ul>
