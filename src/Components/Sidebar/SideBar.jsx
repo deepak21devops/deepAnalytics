@@ -4,6 +4,12 @@ import {
     HomeOutlined, AddOutlined, AssignmentOutlined, EditOutlined, CheckCircleOutlined,
     PauseCircleOutlineOutlined, BarChartOutlined, ShowChartOutlined, TimelineOutlined
 } from '@material-ui/icons'
+import TasksChart from '../../Pages/allTaskChart/TasksChart'
+import { userTasks, CompletedTasks } from '../dummyData'
+import CompletedTasksChart from '../../Pages/CompletedTasksChart/CompletedTasksChart'
+import PendingTaskChart from '../../Pages/PendingTaskCharts/PendingTaskChart'
+
+
 export default function SideBar() {
     return (
         <div className="sidebar">
@@ -76,8 +82,23 @@ export default function SideBar() {
 
             </div>
             <div className="right">
-                Right
+                <div className="chartContainer">
+                    <TasksChart title="All Tasks Report" data={userTasks} datakey="month" />
+                </div>
+                <div className="chartContainer2">
+                    <div className="contentContainer">
+                        <div className="leftChart">
+                            <CompletedTasksChart title="Completed Tasks Report" data={CompletedTasks} datakey="month" />
+                        </div>
+                        <div className="rightChart">
+                            <PendingTaskChart title="Pending Tasks Report" data={CompletedTasks} datakey="month" />
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
         </div>
+
     )
 }

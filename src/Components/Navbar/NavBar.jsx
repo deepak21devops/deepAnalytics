@@ -7,10 +7,10 @@ export default function NavBar() {
         <div className="navbar">
             <div className="navContainer">
                 <div className="navIcon">DeepAnalytics</div>
-                <ul className="navHeaders">
+                {/* <ul className="navHeaders">
                     <li className="createTask">CREATE TASK</li>
                     <li className="alltask">MY TASKS</li>
-                </ul>
+                </ul> */}
                 <div className="navProfile">
                     <div className="profileContent">
                         <div className="notification">
