@@ -2,8 +2,11 @@ import React from 'react'
 import './navbar.css'
 import { NotificationsNone } from '@material-ui/icons'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 export default function NavBar() {
+
+    const name = useSelector(state => state.repo.username)
     return (
         <div className="navbar">
             <div className="navContainer">
@@ -23,7 +26,7 @@ export default function NavBar() {
                         </div>
 
                         <img className="profileimg" src="https://pyxis.nymag.com/v1/imgs/428/089/f25f44f807a04235e9cabaf68fe424ea07-20-florence-pugh.rvertical.w1200.jpg" alt=""></img>
-                        <h3 className="profiletext">Alica Vikanders</h3>
+                        <h3 className="profiletext">{name}</h3>
                     </div>
                 </div>
             </div>

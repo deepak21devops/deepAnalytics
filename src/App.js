@@ -14,51 +14,55 @@ import PendingTaskChart from './Pages/PendingTaskCharts/PendingTaskChart';
 
 function App() {
   return (
-    <Router>
-      <NavBar />
-      <div className="container">
-        <SideBar />
-        <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
+    <>
 
-          <Route path="/mytasks">
-            <AllTaskList />
-          </Route>
+      <Router>
+        <NavBar />
+        <div className="container">
+          <SideBar />
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
 
-          <Route path="/edit">
-            <EditTask />
-          </Route>
+            <Route path="/mytasks">
+              <AllTaskList />
+            </Route>
 
-          <Route path="/newtask">
-            <CreateTask />
-          </Route>
+            <Route path="/edit">
+              <EditTask />
+            </Route>
 
-          <Route path="/completedlist">
-            <CompleteTaskList />
-          </Route>
+            <Route path="/newtask">
+              <CreateTask />
+            </Route>
 
-          <Route path="/pendinglist">
-            <PendingTaskList />
-          </Route>
+            <Route path="/completedlist">
+              <CompleteTaskList />
+            </Route>
 
-          <Route path="/alltaskreports">
-            <TasksChart />
-          </Route>
+            <Route path="/pendinglist">
+              <PendingTaskList />
+            </Route>
 
-          <Route path="/completedtaskreports">
-            <CompletedTasksChart />
-          </Route>
+            <Route path="/alltaskreports">
+              <TasksChart />
+            </Route>
 
-          <Route path="/pendingtaskreports">
-            <PendingTaskChart />
-          </Route>
+            <Route path="/completedtaskreports">
+              <CompletedTasksChart />
+            </Route>
+
+            <Route path="/pendingtaskreports">
+              <PendingTaskChart />
+            </Route>
 
 
-        </Switch>
-      </div>
-    </Router>
+          </Switch>
+        </div>
+      </Router>
+    </>
+
   );
 }
 
