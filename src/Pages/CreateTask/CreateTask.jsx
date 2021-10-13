@@ -5,17 +5,17 @@ import { useDispatch, useSelector } from 'react-redux'
 export default function CreateTask() {
 
     const dispatch = useDispatch()
-    const dataCount = useSelector(state => state.repo.obj)
-    console.log(dataCount.length)
+    const dataCount = useSelector(state => state.repo.obj.length)
 
-    const [task, setTask] = useState("")
-    const [tkCreate, setTkCreate] = useState("")
-    const [tkDead, setTkDead] = useState("")
-    const [tkStatus, setTkStatus] = useState("In Progress")
+
+    const [Taskname, setTask] = useState("")
+    const [Created, setTkCreate] = useState("")
+    const [Deadline, setTkDead] = useState("")
+    const [Status, setTkStatus] = useState("In Progress")
 
     const handleCreate = (e) => {
         e.preventDefault()
-        dispatch(addItem({ id: 2, task, tkCreate, tkDead, tkStatus }))
+        dispatch(addItem({ id: dataCount + 1, Taskname, Created, Deadline, Status }))
         setTask("")
         setTkCreate("")
         setTkDead("")
@@ -23,20 +23,19 @@ export default function CreateTask() {
 
     }
 
-
     return (
         <div className="createTask">
             <h3 className="editTitle">Create New  Task</h3>
             <div className="formContainer">
                 <form className="editform">
                     <label>TaskName</label>
-                    <input type="text" value={task} onChange={(e) => setTask(e.target.value)}></input>
+                    <input type="text" value={Taskname} onChange={(e) => setTask(e.target.value)}></input>
 
                     <label>Created On</label>
-                    <input type="text" value={tkCreate} onChange={(e) => setTkCreate(e.target.value)}></input>
+                    <input type="text" value={Created} onChange={(e) => setTkCreate(e.target.value)}></input>
 
                     <label>DeadLine</label>
-                    <input type="text" value={tkDead} onChange={(e) => setTkDead(e.target.value)}></input>
+                    <input type="text" value={Deadline} onChange={(e) => setTkDead(e.target.value)}></input>
 
                     <label>Status</label>
                     <select className="userSelect" onChange={(e) => setTkStatus(e.target.value)}>

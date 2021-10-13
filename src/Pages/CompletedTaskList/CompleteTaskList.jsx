@@ -4,11 +4,16 @@ import { taskList } from '../AllTaskList/columnsData'
 import { Link } from 'react-router-dom';
 import { DeleteForever } from '@material-ui/icons'
 import './completedTasklist.css'
+import { useSelector } from 'react-redux';
 
 
 export default function CompleteTaskList() {
 
-    const [data, setData] = useState(taskList)
+    const allData = useSelector(state => state.repo.obj)
+    console.log(allData)
+
+    const [data, setData] = useState(allData)
+    console.log(data)
 
     const deleteTask = (id) => {
         setData(data.filter(ele => ele.id !== id))
