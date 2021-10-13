@@ -6,6 +6,11 @@ import Home from './Pages/Home/Home';
 import AllTaskList from './Pages/AllTaskList/AllTaskList';
 import EditTask from './Pages/EditTask/EditTask';
 import CreateTask from './Pages/CreateTask/CreateTask';
+import CompleteTaskList from './Pages/CompletedTaskList/CompleteTaskList';
+import PendingTaskList from './Pages/PendingTaskList/PendingTaskList.jsx';
+import CompletedTasksChart from './Pages/CompletedTasksChart/CompletedTasksChart';
+import TasksChart from './Pages/allTaskChart/TasksChart';
+import PendingTaskChart from './Pages/PendingTaskCharts/PendingTaskChart';
 
 function App() {
   return (
@@ -29,6 +34,27 @@ function App() {
           <Route path="/newtask">
             <CreateTask />
           </Route>
+
+          <Route path="/completedlist">
+            <CompleteTaskList />
+          </Route>
+
+          <Route path="/pendinglist">
+            <PendingTaskList />
+          </Route>
+
+          <Route path="/alltaskreports">
+            <TasksChart />
+          </Route>
+
+          <Route path="/completedtaskreports">
+            <CompletedTasksChart />
+          </Route>
+
+          <Route path="/pendingtaskreports">
+            <PendingTaskChart />
+          </Route>
+
 
         </Switch>
       </div>

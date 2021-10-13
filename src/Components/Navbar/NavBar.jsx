@@ -1,12 +1,16 @@
 import React from 'react'
 import './navbar.css'
 import { NotificationsNone } from '@material-ui/icons'
+import { Link } from 'react-router-dom'
 
 export default function NavBar() {
     return (
         <div className="navbar">
             <div className="navContainer">
-                <div className="navIcon">DeepAnalytics</div>
+                <Link to="/" className="link">
+                    <div className="navIcon">DeepAnalytics</div>
+                </Link>
+
                 {/* <ul className="navHeaders">
                     <li className="createTask">CREATE TASK</li>
                     <li className="alltask">MY TASKS</li>

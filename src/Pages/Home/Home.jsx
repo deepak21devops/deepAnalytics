@@ -10,7 +10,7 @@ export default function Home() {
         <div className="homeContainer">
             <div className="right">
                 <div className="chartContainer">
-                    <TasksChart title="All Tasks Report" data={userTasks} datakey="month" />
+                    <TasksChart />
                 </div>
                 <div className="chartContainer2">
                     <div className="contentContainer">

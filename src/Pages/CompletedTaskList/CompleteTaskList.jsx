@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import './allTasklist.css'
 import { DataGrid } from '@mui/x-data-grid';
-import { taskList } from './columnsData'
+import { taskList } from '../AllTaskList/columnsData'
 import { Link } from 'react-router-dom';
 import { DeleteForever } from '@material-ui/icons'
-export default function AllTaskList() {
+import './completedTasklist.css'
+
+
+export default function CompleteTaskList() {
 
     const [data, setData] = useState(taskList)
 
@@ -61,18 +63,20 @@ export default function AllTaskList() {
             }
         }
     ];
-
     return (
-        <div style={{ height: 500, width: '100%' }} className="dataGrid">
-            <h3 className="headerlist">All Tasks List</h3>
-            <DataGrid
-                rows={data}
-                columns={columns}
-                pageSize={7}
-                rowsPerPageOptions={[5]}
-                checkboxSelection
-                disableSelectionOnClick
-            />
-        </div>
+        <>
+
+            <div style={{ height: 500, width: '100%' }} className="dataGrid">
+                <h3 className="headerlist">Completed Tasks</h3>
+                <DataGrid
+                    rows={data}
+                    columns={columns}
+                    pageSize={7}
+                    rowsPerPageOptions={[5]}
+                    checkboxSelection
+                    disableSelectionOnClick
+                />
+            </div>
+        </>
     )
 }

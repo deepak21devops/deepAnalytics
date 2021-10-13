@@ -53,16 +53,20 @@ export default function SideBar() {
                                 </li>
                             </Link>
 
+                            <Link to="/completedlist" className="link">
+                                <li className="menuItems">
+                                    <CheckCircleOutlined className="icons" />
+                                    <span>Completed Tasks</span>
+                                </li>
+                            </Link>
 
-                            <li className="menuItems">
-                                <CheckCircleOutlined className="icons" />
-                                <span>Completed Tasks</span>
-                            </li>
+                            <Link to="/pendinglist" className="link">
+                                <li className="menuItems">
+                                    <PauseCircleOutlineOutlined className="icons" />
+                                    <span>Pending Tasks</span>
+                                </li>
+                            </Link>
 
-                            <li className="menuItems">
-                                <PauseCircleOutlineOutlined className="icons" />
-                                <span>Pending Tasks</span>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -71,23 +75,28 @@ export default function SideBar() {
                     <div className="menu">
                         <h3 className="menuTitle">Reports Menu</h3>
                         <ul className="menulist">
-                            <Link to="" className="link">
+                            <Link to="/alltaskreports" className="link">
                                 <li className="menuItems" >
                                     <BarChartOutlined className="icons" />
                                     <span>All Tasks Reports</span>
                                 </li>
                             </Link>
 
+                            <Link to="/completedtaskreports" className="link">
+                                <li className="menuItems">
+                                    <ShowChartOutlined className="icons" />
+                                    <span>Completed Tasks Report</span>
+                                </li>
+                            </Link>
 
-                            <li className="menuItems">
-                                <ShowChartOutlined className="icons" />
-                                <span>Completed Tasks Report</span>
-                            </li>
 
-                            <li className="menuItems">
-                                <TimelineOutlined className="icons" />
-                                <span>Pending Tasks Report</span>
-                            </li>
+                            <Link to="/pendingtaskreports" className="link">
+                                <li className="menuItems">
+                                    <TimelineOutlined className="icons" />
+                                    <span>Pending Tasks Report</span>
+                                </li>
+                            </Link>
+
                         </ul>
                     </div>
                 </div>

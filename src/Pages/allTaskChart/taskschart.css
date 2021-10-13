@@ -1,12 +1,14 @@
 .alltasksReport{
     padding:20px;
+    flex:4;
 }
 
 
-.chartTitle{
+.chartTitles{
     font-size: 30px;
-    font-weight: 600;
+    font-weight: bolder;
     margin-bottom: 20px;
     display: flex;
+    
 }
 
