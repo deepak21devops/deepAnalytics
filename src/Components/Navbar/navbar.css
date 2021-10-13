@@ -2,6 +2,10 @@
     height: 80px;
     /* border:1px solid black; */
     /* background-color: rgb(38, 38, 175); */
+    position: sticky;
+    top:0;
+    z-index: 999;
+    width: 100%;
 }
 
 .navContainer{

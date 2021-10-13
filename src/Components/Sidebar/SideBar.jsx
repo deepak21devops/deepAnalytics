@@ -4,10 +4,8 @@ import {
     HomeOutlined, AddOutlined, AssignmentOutlined, EditOutlined, CheckCircleOutlined,
     PauseCircleOutlineOutlined, BarChartOutlined, ShowChartOutlined, TimelineOutlined
 } from '@material-ui/icons'
-import TasksChart from '../../Pages/allTaskChart/TasksChart'
-import { userTasks, CompletedTasks } from '../dummyData'
-import CompletedTasksChart from '../../Pages/CompletedTasksChart/CompletedTasksChart'
-import PendingTaskChart from '../../Pages/PendingTaskCharts/PendingTaskChart'
+import { Link } from 'react-router-dom'
+
 
 
 export default function SideBar() {
@@ -18,20 +16,28 @@ export default function SideBar() {
                     <div className="menu">
                         <h3 className="menuTitle">DashBoard</h3>
                         <ul className="menulist">
-                            <li className="menuItems">
-                                <HomeOutlined className="icons" />
-                                <span>Home</span>
-                            </li>
+                            <Link to="/" className="link">
+                                <li className="menuItems">
+                                    <HomeOutlined className="icons" />
+                                    <span>Home</span>
+                                </li>
+                            </Link>
 
-                            <li className="menuItems">
-                                <AddOutlined className="icons" />
-                                <span>Create Task</span>
-                            </li>
 
-                            <li className="menuItems">
-                                <EditOutlined className="icons" />
-                                <span>Edit Task</span>
-                            </li>
+                            <Link to="/newtask" className="link">
+                                <li className="menuItems">
+                                    <AddOutlined className="icons" />
+                                    <span>Create Task</span>
+                                </li>
+                            </Link>
+
+                            <Link to="/edit" className="link">
+                                <li className="menuItems">
+                                    <EditOutlined className="icons" />
+                                    <span>Edit Task</span>
+                                </li>
+                            </Link>
+
                         </ul>
                     </div>
                 </div>
@@ -40,10 +46,13 @@ export default function SideBar() {
                     <div className="menu">
                         <h3 className="menuTitle">Quick Menu</h3>
                         <ul className="menulist">
-                            <li className="menuItems">
-                                <AssignmentOutlined className="icons" />
-                                <span>My Tasks</span>
-                            </li>
+                            <Link to="/mytasks" className="link">
+                                <li className="menuItems">
+                                    <AssignmentOutlined className="icons" />
+                                    <span>My Tasks</span>
+                                </li>
+                            </Link>
+
 
                             <li className="menuItems">
                                 <CheckCircleOutlined className="icons" />
@@ -62,10 +71,13 @@ export default function SideBar() {
                     <div className="menu">
                         <h3 className="menuTitle">Reports Menu</h3>
                         <ul className="menulist">
-                            <li className="menuItems">
-                                <BarChartOutlined className="icons" />
-                                <span>All Tasks Reports</span>
-                            </li>
+                            <Link to="" className="link">
+                                <li className="menuItems" >
+                                    <BarChartOutlined className="icons" />
+                                    <span>All Tasks Reports</span>
+                                </li>
+                            </Link>
+
 
                             <li className="menuItems">
                                 <ShowChartOutlined className="icons" />
@@ -81,21 +93,7 @@ export default function SideBar() {
                 </div>
 
             </div>
-            <div className="right">
-                <div className="chartContainer">
-                    <TasksChart title="All Tasks Report" data={userTasks} datakey="month" />
-                </div>
-                <div className="chartContainer2">
-                    <div className="contentContainer">
-                        <div className="leftChart">
-                            <CompletedTasksChart title="Completed Tasks Report" data={CompletedTasks} datakey="month" />
-                        </div>
-                        <div className="rightChart">
-                            <PendingTaskChart title="Pending Tasks Report" data={CompletedTasks} datakey="month" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
 
         </div>

@@ -1,0 +1,55 @@
+.editContainer{
+    flex:4;
+    margin-left: 100px;
+}
+
+
+
+.editTitle{
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color:darkblue;
+}
+
+
+.editform{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.editform>label{
+    margin-bottom: 5px;
+    font-size: 20px;
+    color:crimson;
+}
+
+.editform>input{
+    margin-bottom: 20px;
+    height: 30px;
+    border:none;
+    border-bottom: 1px solid rgb(189, 8, 8);
+    outline: none;
+    padding:5px;
+    font-size: 15px;
+}
+
+.userSelect{
+    width: 150px;
+    padding:2px;
+    font-size: 15px;
+    margin-bottom: 70px;
+    cursor: pointer;
+}
+
+.updbtn{
+    padding:5px;
+    background-color: darkblue;
+    color:white;
+    font-weight: bold;
+    border-radius: 10px;
+    border:none;
+    font-size: 15px;
+    cursor: pointer;
+}

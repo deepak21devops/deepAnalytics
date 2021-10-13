@@ -1,0 +1,64 @@
+.homeContainer{
+    flex:4;
+   
+}
+
+.right{
+   
+    /* width: 100%; */
+    /* display: flex; */
+
+}
+
+.chartContainer{
+    padding:10px;
+    margin:20px;
+    /* width: 80%; */
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+border-radius: 10px;
+}
+
+.chartContainer2{
+    
+    margin:20px;
+    
+    
+    
+}
+
+.contentContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+
+}
+
+.leftChart{
+    flex:1;
+    margin-right: 20px;
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+padding:20px;      
+border-radius: 10px;    
+                                                                                                                                                                              
+
+
+}
+
+.recharts-default-legend{
+    margin-top: 20px;
+}
+
+.rightChart{
+    flex:1;
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+padding:20px;
+border-radius: 10px;
+}

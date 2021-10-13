@@ -1,0 +1,25 @@
+.dataGrid{
+    flex:4;
+    width: 90%;
+}
+
+.editbtn{
+    background-color: rgb(97, 206, 97);
+    padding:8px;
+    border-radius: 10px;
+    border:none;
+    color:cornsilk;
+    font-weight: bolder;
+    width: 50px;
+    margin-right: 20px;
+    cursor: pointer;
+    
+}
+
+.delbtn{
+    background-color: crimson;
+    padding:5px;
+    border-radius: 10px;
+    color:white;
+    cursor: pointer;
+}
