@@ -40,6 +40,15 @@ export default function EditTask() {
 
         dispatch(updateItem(newData))
 
+        setTask("")
+        setTkCreate("")
+        setTkDead("")
+        setTkStatus("")
+        setFlag(true)
+        setInterval(() => {
+            setFlag(false)
+        }, 2000)
+
 
     }
 
@@ -73,8 +82,9 @@ export default function EditTask() {
                         </select>
                         <button className="updbtn" onClick={(e) => handleUpdate(e)}>Update</button>
                     </form>
-                ))}
 
+                ))}
+                {flag ? <span className="info">Task Updated succesfully!!!</span> : ""}
             </div>
 
         </div>

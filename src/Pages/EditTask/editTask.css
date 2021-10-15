@@ -39,7 +39,7 @@
     width: 150px;
     padding:2px;
     font-size: 15px;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
     cursor: pointer;
 }
 
@@ -52,4 +52,11 @@
     border:none;
     font-size: 15px;
     cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.info{
+    padding:8px;
+    background-color: lightgreen;
+    border-radius: 10px;
 }
