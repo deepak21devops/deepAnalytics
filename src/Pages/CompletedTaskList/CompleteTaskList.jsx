@@ -10,10 +10,10 @@ import { useSelector } from 'react-redux';
 export default function CompleteTaskList() {
 
     const allData = useSelector(state => state.repo.obj)
-    console.log(allData)
+
 
     const [data, setData] = useState(allData)
-    console.log(data)
+
 
     const deleteTask = (id) => {
         setData(data.filter(ele => ele.id !== id))

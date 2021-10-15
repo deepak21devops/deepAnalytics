@@ -1,29 +1,80 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import './editTask.css'
+import { updateItem } from '../../Components/redux/userData'
+import { useDispatch } from 'react-redux';
 export default function EditTask() {
+    const dispatch = useDispatch()
+
+
+
+
+
+    const myData = useSelector(state => state.repo.obj)
+
+    let params = useParams()
+
+    const getData = myData.filter(itm => itm.id === Number(params.id))
+    console.log(getData)
+
+    const [flag, setFlag] = useState(false)
+    let id = Number(params.id)
+
+    const [Taskname, setTask] = useState(getData[0].Taskname)
+    const [Created, setTkCreate] = useState(getData[0].Created)
+    const [Deadline, setTkDead] = useState(getData[0].Deadline)
+    const [Status, setTkStatus] = useState(getData[0].Status)
+
+    const handleUpdate = (e) => {
+        e.preventDefault()
+
+        const newData = myData.map(ele => {
+            if (ele.id === id) {
+                return { ...ele, Taskname, Created, Deadline, Status }
+
+            }
+            return ele
+        })
+
+
+        dispatch(updateItem(newData))
+
+
+    }
+
+
+
+
+
+
     return (
         <div className="editContainer">
             <h3 className="editTitle">Edit Task</h3>
             <div className="formContainer">
-                <form className="editform">
-                    <label>TaskName</label>
-                    <input type="text"></input>
 
-                    <label>Created On</label>
-                    <input type="text"></input>
+                {getData.map(ele => (
+                    <form className="editform" key={ele.id}>
 
-                    <label>DeadLine</label>
-                    <input type="text"></input>
+                        <label>TaskName</label>
+                        <input type="text" value={Taskname} onChange={(e) => setTask(e.target.value)}></input>
 
-                    <label>Status</label>
-                    <select className="userSelect">
-                        <option value="in progress">In Progress</option>
-                        <option value="completed">Completed</option>
-                        <option value="pending">Pending</option>
-                    </select>
+                        <label>Created On</label>
+                        <input type="text" value={Created} onChange={(e) => setTkCreate(e.target.value)}></input>
 
-                    <button className="updbtn">Update</button>
-                </form>
+                        <label>DeadLine</label>
+                        <input type="text" value={Deadline} onChange={(e) => setTkDead(e.target.value)}></input>
+
+                        <label>Status</label>
+                        <select className="userSelect" value={Status} onChange={(e) => setTkStatus(e.target.value)}>
+                            <option value="in progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                        <button className="updbtn" onClick={(e) => handleUpdate(e)}>Update</button>
+                    </form>
+                ))}
+
             </div>
 
         </div>

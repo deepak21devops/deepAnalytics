@@ -10,14 +10,17 @@ export const userDataSlice = createSlice({
     reducers: {
         addItem: (state, action) => {
             state.obj = [...state.obj, action.payload]
-            // state.obj.map(ele => (
-            //     localStorage.setItem('task', ele.id)
-            // ))
 
+
+        },
+        updateItem: (state, action) => {
+            state.obj = action.payload
         }
-    }
 
+    }
 })
 
-export const { addItem } = userDataSlice.actions
+
+
+export const { addItem, updateItem } = userDataSlice.actions
 export default userDataSlice.reducer

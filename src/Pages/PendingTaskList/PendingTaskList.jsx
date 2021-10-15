@@ -4,11 +4,13 @@ import { taskList } from '../AllTaskList/columnsData'
 import { Link } from 'react-router-dom';
 import { DeleteForever } from '@material-ui/icons'
 import './pendingTaskList.css'
-
+import { useSelector } from 'react-redux';
 
 export default function PendingTaskList() {
 
-    const [data, setData] = useState(taskList)
+    const allData = useSelector(state => state.repo.obj)
+
+    const [data, setData] = useState(allData)
 
     const deleteTask = (id) => {
         setData(data.filter(ele => ele.id !== id))

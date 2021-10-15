@@ -29,7 +29,7 @@ function App() {
               <AllTaskList />
             </Route>
 
-            <Route path="/edit">
+            <Route path="/edit/:id">
               <EditTask />
             </Route>
 

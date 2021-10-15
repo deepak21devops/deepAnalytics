@@ -31,7 +31,7 @@ export default function SideBar() {
                                 </li>
                             </Link>
 
-                            <Link to="/edit" className="link">
+                            <Link to="/edit/:id" className="link">
                                 <li className="menuItems">
                                     <EditOutlined className="icons" />
                                     <span>Edit Task</span>

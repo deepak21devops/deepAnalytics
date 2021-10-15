@@ -4,9 +4,15 @@ import { DataGrid } from '@mui/x-data-grid';
 import { taskList } from './columnsData'
 import { Link } from 'react-router-dom';
 import { DeleteForever } from '@material-ui/icons'
+import { useSelector } from 'react-redux';
+import EditTask from '../EditTask/EditTask';
+
+
 export default function AllTaskList() {
 
-    const [data, setData] = useState(taskList)
+    const allData = useSelector(state => state.repo.obj)
+    const [data, setData] = useState(allData)
+
 
     const deleteTask = (id) => {
         setData(data.filter(ele => ele.id !== id))
