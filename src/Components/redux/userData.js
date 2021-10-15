@@ -4,7 +4,7 @@ export const userDataSlice = createSlice({
     name: "repo",
     initialState: {
         obj: [
-            { id: 1, Taskname: 'Deepak', Created: 'Oct-4-2021', Deadline: 'Oct-10-2021', Status: 'Active' }
+            { id: 1, Taskname: 'Deepak', Created: 'Oct-4-2021', Deadline: 'Oct-10-2021', Status: 'Completed' }
         ]
     },
     reducers: {

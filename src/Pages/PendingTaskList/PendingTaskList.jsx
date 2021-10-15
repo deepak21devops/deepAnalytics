@@ -9,8 +9,9 @@ import { useSelector } from 'react-redux';
 export default function PendingTaskList() {
 
     const allData = useSelector(state => state.repo.obj)
+    const tkComplete = allData.filter(ele => ele.Status === 'pending')
 
-    const [data, setData] = useState(allData)
+    const [data, setData] = useState(tkComplete)
 
     const deleteTask = (id) => {
         setData(data.filter(ele => ele.id !== id))

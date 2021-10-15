@@ -29,3 +29,7 @@
     color:white;
     cursor: pointer;
 }
+
+.MuiDataGrid-columnsContainer {
+    background-color: #002D72;
+  }

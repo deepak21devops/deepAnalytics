@@ -11,8 +11,10 @@ export default function CompleteTaskList() {
 
     const allData = useSelector(state => state.repo.obj)
 
+    const tkComplete = allData.filter(ele => ele.Status === 'Completed')
 
-    const [data, setData] = useState(allData)
+
+    const [data, setData] = useState(tkComplete)
 
 
     const deleteTask = (id) => {
