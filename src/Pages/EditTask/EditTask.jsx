@@ -7,15 +7,12 @@ import { useDispatch } from 'react-redux';
 export default function EditTask() {
     const dispatch = useDispatch()
 
-
-
-
-
     const myData = useSelector(state => state.repo.obj)
+    const storageItems = localStorage.getItem('task')
 
     let params = useParams()
 
-    const getData = myData.filter(itm => itm.id === Number(params.id))
+    const getData = JSON.parse(storageItems).filter(itm => itm.id === Number(params.id))
     console.log(getData)
 
     const [flag, setFlag] = useState(false)

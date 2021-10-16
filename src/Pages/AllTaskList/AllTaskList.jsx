@@ -9,13 +9,19 @@ import EditTask from '../EditTask/EditTask';
 
 
 export default function AllTaskList() {
-
+    const storageItems = localStorage.getItem('task')
     const allData = useSelector(state => state.repo.obj)
-    const [data, setData] = useState(allData)
+    const [data, setData] = useState(JSON.parse(storageItems))
+
+  
+   
+    console.log(storageItems)
 
 
     const deleteTask = (id) => {
-        setData(data.filter(ele => ele.id !== id))
+        const removData = data.filter(ele => ele.id !== id)
+        setData(removData)
+        localStorage.setItem("task",JSON.stringify(removData))
     }
 
     const columns = [

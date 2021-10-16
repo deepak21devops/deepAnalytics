@@ -8,10 +8,10 @@ import { useSelector } from 'react-redux';
 
 
 export default function CompleteTaskList() {
-
+    const storageItems = localStorage.getItem('task')
     const allData = useSelector(state => state.repo.obj)
-
-    const tkComplete = allData.filter(ele => ele.Status === 'Completed')
+    
+    const tkComplete = allData.filter(ele => ele.Status === 'completed')
 
 
     const [data, setData] = useState(tkComplete)
